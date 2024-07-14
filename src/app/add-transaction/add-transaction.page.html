@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/expense-tracker"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add Transaction
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Amount</ion-label>
+    <ion-input type="number" [(ngModel)]="amount"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Category</ion-label>
+    <ion-select [(ngModel)]="category">
+      <ion-select-option value="Food">Food</ion-select-option>
+      <ion-select-option value="Transport">Transport</ion-select-option>
+      <ion-select-option value="Shopping">Shopping</ion-select-option>
+      <ion-select-option value="Bills">Bills</ion-select-option>
+      <ion-select-option value="Others">Others</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Date</ion-label>
+    <ion-datetime display-format="YYYY-MM-DD" [(ngModel)]="date"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Notes</ion-label>
+    <ion-textarea rows="3" [(ngModel)]="notes"></ion-textarea>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Location</ion-label>
+    <ion-input type="text" [(ngModel)]="location"></ion-input>
+  </ion-item>
+  
+  <ion-button expand="block" (click)="addTransaction()">Add Transaction</ion-button>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

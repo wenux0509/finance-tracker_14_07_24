@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Expense <br>
+      Tracker
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToProfile()">Profile</ion-button>
+      <ion-button (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Welcome {{ username }}</h2>
+
+  <ion-button expand="block" (click)="addTransaction()">Add Transaction</ion-button>
+
+  <ion-spinner *ngIf="loading"></ion-spinner> <!-- Show loading spinner when data is loading -->
+
+  <ion-list *ngIf="!loading && transactions.length > 0">
+    <ion-item *ngFor="let transaction of transactions">
+      <ion-label>
+        <h2>Amount: {{ transaction.amount }} MYR</h2>
+        <p>Category: {{ transaction.category }}</p>
+        <p>Date: {{ transaction.date }}</p>
+        <p>Notes: {{ transaction.notes }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngIf="!loading && transactions.length === 0">
+    <ion-label>
+      No transactions recorded yet.
+    </ion-label>
+  </ion-item>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
