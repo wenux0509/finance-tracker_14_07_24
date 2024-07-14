@@ -2,10 +2,10 @@
 A version of finance tracker that match with the 14_7_24 milestones report
 In case you interested start working with this one can proceed. 
 
-Before running ionic serve
-Make sure install these elements by running these command in the project directory
-npm install @capacitor/camera
-npm install @ionic/pwa-elements
+Before running ionic serve <br>
+Make sure install these elements by running these command in the project directory <br>
+npm install @capacitor/camera <br>
+npm install @ionic/pwa-elements <br>
 
 
 Database name: expensedb
